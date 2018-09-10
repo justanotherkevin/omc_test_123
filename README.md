@@ -1,6 +1,7 @@
 # making_emails
 
-[more example](https://itnext.io/pug-js-to-make-your-life-easier-with-html-templates-9c62273626e0) here using gulp to create emails
+[more example](https://itnext.io/pug-js-to-make-your-life-easier-with-html-templates-9c62273626e0) here using gulp to create emails  
+[reference](https://templates.mailchimp.com/resources/email-client-css-support/) to what is **not supported** across different browsers  
 
 modifying src/emails/index.pug will change the output file in dist/index which is served with npm; default at localhost:3000;
 
