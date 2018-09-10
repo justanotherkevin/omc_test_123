@@ -1,7 +1,7 @@
 # Don't track content of these folders
 node_modules/
 someOtherfoler/
-
+dist/
 
 # Compiled source #
 ###################
@@ -26,3 +26,4 @@ someOtherfoler/
 *.rar
 *.tar
 *.zip
+
