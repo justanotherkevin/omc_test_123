@@ -1,36 +1,253 @@
 doctype html
 html
-    head
-        title One | Email template!
-
-        //- import css/scss stylesheets
-        //- these file names will be replace by gulp with proper css file paths
-        link(rel="stylesheet", href="../sass/basic.scss")
-        link(rel="stylesheet", href="../sass/styles.scss")
-
-        //- embdedded css allowed, but not sass
-        style.
+   head
+      title One | Email template!
+         //- import css/scss stylesheets
+         //- these file names will be replace by gulp with proper css file paths
+         link(rel="stylesheet", href="../sass/basic.scss")
+         link(rel="stylesheet", href="../sass/styles.scss")
+         //- embdedded css allowed, but not sass
+         style.
             .red{
-                background-color: #E84C50;
+               background-color: #E84C50;
             }
             .full-width{
-                width: 100%;
+               width: 100%;
             }
-    body
-        div.wrapper
-          div.wrapper-inner 
-            p
-              = 'This code is <escaped>!'   
-            p!= 'This code is <strong>not</strong> escaped!'
-            p!= 'This code is' + ' <strong>not</strong> escaped!'
-            ul 
-              - for (var x = 0; x < 3; x++)
-                li this list of items
-
-            br
-
-            - 
-              var list = ["Uno", "Dos", "Tres",
-                      "Cuatro", "Cinco", "Seis"]
-            each item in list
-              li= item
+      body
+         div.wrapper
+            div.wrapper-inner 
+               table.outer-table
+                  tr
+                     td.image
+                        img(src="./imgs/Optimized-header-logo.png")
+                  table.main-table 
+                     tr
+                        td.one-column
+                           table
+                              tr
+                                 td.inner-td
+                                    p You’re the best. Thanks for continuing to rely on Evercontact to keep that address book of yours up-to-date. 
+                                    p Let’s take a look at your monthly stats!
+               //- section for all the maths 
+               table.outer-table 
+                  tr
+                     td.three-column
+                        div.section
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    img(src='./imgs/Group-1-reload.png')
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    h3 47 total 
+                                    p Total Contacts Updated
+                        div.section
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    img(src='./imgs/Group-1-folder.png')
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    h3 47 total 
+                                    p Total Contacts Updated
+                        div.section
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    img(src='./imgs/Group-1-contact.png')
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    h3 47 total 
+                                    p Total Contacts Updated
+                  tr
+                     td.three-column
+                        div.section
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    img(src='./imgs/Group-1-time.png')
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    h3 47 total 
+                                    p Total Contacts Updated
+                        div.section
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    img(src='./imgs/Group-1-people.png')
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    h3 47 total 
+                                    p Total Contacts Updated
+                        div.section
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    img(src='./imgs/Group-1-clock.png')
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    h3 47 total 
+                                    p Total Contacts Updated
+               //- END section for all the maths 
+               //- section for dates of the month
+               table.outer-table
+                  tr
+                     td.two-column
+                        div.section
+                           table
+                              tr
+                                 td
+                                    div.section
+                                       table.same-line
+                                          tr
+                                             td.inner-td
+                                                img(src='./imgs/Group-1-reload.png')
+                                       table.same-line
+                                          tr
+                                             td.inner-td
+                                                h3 47 total 
+                                                p Total Contacts Updated
+                                    div.section
+                                       table.same-line
+                                          tr
+                                             td.inner-td
+                                                img(src='./imgs/Group-1-reload.png')
+                                       table.same-line
+                                          tr
+                                             td.inner-td
+                                                h3 47 total 
+                                                p Total Contacts Updated
+                        div.section
+                           table 
+                              tr
+                                 td
+                                    p Your busiest day was Tues the 23rd. For other people, Monday was the busiest.
+                                    - var list = ['SUN','MON','TUES','WED','THUR','FRI','SAT']
+                                    div.week-wrapper
+                                       for i in list 
+                                          div.day-wrapper
+                                             p=`${i}`
+               //- END section for dates of the month
+               //- section for special people 
+               table.outer-table
+                  tr
+                     td.three-column 
+                        div.section
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    img(src='./imgs/Group-1-reload.png')
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    h3 person name title 
+                                    p about this person 
+                        div.section
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    img(src='./imgs/Group-1-folder.png')
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    h3 person name title 
+                                    p about this person 
+                        div.section
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    img(src='./imgs/Group-1-reload.png')
+                           table.same-line
+                              tr
+                                 td.inner-td
+                                    h3 person name title 
+                                    p about this person 
+               //- END section for special people 
+               //- section above total statistic
+               table.main-table
+                  tr 
+                     td.three-column.text-align-start 
+                        div.section
+                           p hello 1
+                        div.section
+                           p hello 1
+                        div.section
+                           p hello 1
+               //- END section above total statistic
+               //- section total statistic
+               table.outer-table
+                  tr 
+                     td.three-column
+                        div.section
+                           table
+                              tr 
+                                 td.text
+                                    h3 47 total 
+                                    p Total Contacts Updated
+                        div.section
+                           table
+                              tr 
+                                 td.text
+                                    h3 47 total 
+                                    p Total Contacts Updated
+                        div.section
+                           table
+                              tr 
+                                 td.text
+                                    h3 47 total 
+                                    p Total Contacts Updated
+               //- END section total statistic
+               //- section below total statistic
+               table.main-table
+                  tr 
+                     td.one-column
+                        div.section
+                           p only need one
+               //- END section below total statistic 
+               //- Section quotes and tips
+               table.outer-table 
+                  tr 
+                     td.two-column
+                        div.section
+                           table
+                              tr
+                                 td.inner-td
+                                    img(src='./imgs/Group-1-contact.png')
+                           table
+                              tr
+                                 td.inner-td
+                                    p Evercontact has become one of my preferred set of ‘set it and forget it’ tools for getting organized.
+                                    p Sarah Perez, TechCrunch
+                        div.section
+                           table
+                              tr
+                                 td.inner-td
+                                    img(src='./imgs/Group-1-contact.png')
+               //- END Section quotes and tips
+               //- FOOTER 
+               table.outer-table
+                  tr
+                     td.three-column 
+                        div.section
+                           table 
+                              tr
+                                 td.text
+                                    p text text
+                        div.section
+                           table 
+                              tr
+                                 td.text
+                                    p text text
+                        div.section
+                           table 
+                              tr
+                                 td.text
+                                    p text text
+               //- FOOTER 
