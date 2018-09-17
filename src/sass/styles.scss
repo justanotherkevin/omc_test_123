@@ -26,6 +26,11 @@ table {
   width: 100%;
   // outline-style: solid;
 }
+table,
+td {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt;
+}
 br {
   line-height: 17px;
 }
@@ -122,13 +127,13 @@ img {
 //   }
 // }
 
-// header logo
+// header table,
 .header-table {
   background-color: $primary-color;
   .three-column {
     .section {
-      // display: table-cell;
-      display: inline-block;
+      display: table-cell;
+      // display: inline-block;
       padding: 25px 0;
       // text-align: center;
       &.last {
@@ -143,8 +148,8 @@ img {
     list-style: none;
     padding-left: 15px;
     li {
-      display: inline-block;
-      // display: table-cell;
+      // display: inline-block;
+      display: table-cell;
       a {
         padding: 10px;
         .social-fb-icon {

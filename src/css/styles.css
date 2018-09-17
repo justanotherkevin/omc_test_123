@@ -16,6 +16,11 @@ table {
   line-height: 0;
   width: 100%; }
 
+table,
+td {
+  mso-table-lspace: 0pt;
+  mso-table-rspace: 0pt; }
+
 br {
   line-height: 17px; }
 
@@ -96,7 +101,7 @@ img {
 .header-table {
   background-color: #63b4b5; }
   .header-table .three-column .section {
-    display: inline-block;
+    display: table-cell;
     padding: 25px 0; }
     .header-table .three-column .section.last {
       text-align: end; }
@@ -106,7 +111,7 @@ img {
     list-style: none;
     padding-left: 15px; }
     .header-table .social-list li {
-      display: inline-block; }
+      display: table-cell; }
       .header-table .social-list li a {
         padding: 10px; }
         .header-table .social-list li a .social-fb-icon {

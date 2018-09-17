@@ -21,21 +21,8 @@ head
 				text-align: center;
 				background-color: red;
 			}
-			//- .math-table .section {
-			//- 	display: inline-block !important;
-			//- 	width: 100% !important;
-			//- 	max-width: 315px !important;
-			//- }
-			//- .math-table .math-symbol.section {
-			//- 	display: block !important;
-			//- 	width: 20px !important;
-			//- 	padding-left: 50% !important;
-			//- }
 		}
 body
-	//- div.wrapper
-	//- 	div.wrapper-inner
-			//- header table
 	table(class='outer-table header-table', cellpadding="0", border="0", cellspacing="0")
 		tr
 			td.content.main-table 
@@ -44,18 +31,30 @@ body
 						td.content.section
 							p.white-color <strong>Month 2018</strong>
 						td.section
-							img(src="./imgs/company-logo.png")
+							img(src='./imgs/company-logo.png')
 						td.section.last
 							ul.social-list
 								li 
 									a(href='/')
-										img(class="social-fb-icon" src='./imgs/social-fb.png')
+										img(
+											class='social-fb-icon' 
+											src='./imgs/social-fb.png'
+											alt='facebook-link'
+											)
 								li 
 									a(href='/')
-										img(class="social-twi-icon" src='./imgs/social-twi.png')
+										img(
+											class='social-twi-icon'
+											src='./imgs/social-twi.png'
+											alt='twitter-link'
+											)
 								li 
 									a(href='/')
-										img(class="social-blog-icon" src='./imgs/social-blog.png')
+										img(
+											class='social-blog-icon'
+											src='./imgs/social-blog.png'
+											alt='blog-link'
+											)
 	//- END header table
 	//- section post header text 
 	table
@@ -151,16 +150,6 @@ body
 						td
 							h3.primary-color 47 emails
 							p Total emails received
-				//- div.section
-				//- 	table
-				//- 		tr
-				//- 			td
-				//- 				p Your busiest day was Tues the 23rd. For other people, Monday was the busiest.
-				//- 				- var list = ['SUN','MON','TUES','WED','THUR','FRI','SAT']
-				//- 				div.week-wrapper
-				//- 					for i in list
-				//- 						div.day-wrapper
-				//- 							p=`${i}`
 	//- END section for dates of the month
 	//- section for special people
 	table.people-table.bg-color
@@ -233,7 +222,8 @@ body
 		tr
 			td.main-table
 				p <strong>Plan: Essentials</strong>
-				<p><a name='test link' href='/'></a>test link</p> 
+				a(class="primary-color" href="http://www.yahoo.com")="(upgrade)"
+
 					//- a(name="" class="primary-color" href='/')
 					
 	//- END section below total statistic
@@ -258,26 +248,12 @@ body
 	//- FOOTER
 	table.footer
 		tr
-			//- td.three-column.outer-table
-			//- 	table.section
-			//- 		tr
-			//- 			td.content
-			//- 				p © 2018 One More Company, Inc.
-			//- 	table.section
-			//- 		tr
-			//- 			td.content
-			//- 				a(class="" href='/')="Unsubscribe from this list"
-			//- 	table.section
-			//- 		tr
-			//- 			td.content
-			//- 				p 61 Broadway
-			//- 				p New York, NY 10006
 			td.outer-table
 				table.section 
 					tr
 						td 
 							img(class="icon-made-in-ny" src='./imgs/made-in-ny.png')
 							p © 2018 One More Company, Inc.
-							a(class="" href='/')="Unsubscribe from this list"
+							a(class="" href="http://www.yahoo.com")="Unsubscribe from this list"
 							p 61 Broadway New York, NY 10006
 	//- FOOTER
