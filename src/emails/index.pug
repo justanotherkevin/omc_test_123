@@ -1,253 +1,283 @@
 doctype html
 html
-   head
-      title One | Email template!
-         //- import css/scss stylesheets
-         //- these file names will be replace by gulp with proper css file paths
-         link(rel="stylesheet", href="../sass/basic.scss")
-         link(rel="stylesheet", href="../sass/styles.scss")
-         //- embdedded css allowed, but not sass
-         style.
-            .red{
-               background-color: #E84C50;
-            }
-            .full-width{
-               width: 100%;
-            }
-      body
-         div.wrapper
-            div.wrapper-inner 
-               table.outer-table
-                  tr
-                     td.image
-                        img(src="./imgs/Optimized-header-logo.png")
-                  table.main-table 
-                     tr
-                        td.one-column
-                           table
-                              tr
-                                 td.inner-td
-                                    p You’re the best. Thanks for continuing to rely on Evercontact to keep that address book of yours up-to-date. 
-                                    p Let’s take a look at your monthly stats!
-               //- section for all the maths 
-               table.outer-table 
-                  tr
-                     td.three-column
-                        div.section
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    img(src='./imgs/Group-1-reload.png')
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    h3 47 total 
-                                    p Total Contacts Updated
-                        div.section
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    img(src='./imgs/Group-1-folder.png')
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    h3 47 total 
-                                    p Total Contacts Updated
-                        div.section
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    img(src='./imgs/Group-1-contact.png')
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    h3 47 total 
-                                    p Total Contacts Updated
-                  tr
-                     td.three-column
-                        div.section
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    img(src='./imgs/Group-1-time.png')
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    h3 47 total 
-                                    p Total Contacts Updated
-                        div.section
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    img(src='./imgs/Group-1-people.png')
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    h3 47 total 
-                                    p Total Contacts Updated
-                        div.section
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    img(src='./imgs/Group-1-clock.png')
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    h3 47 total 
-                                    p Total Contacts Updated
-               //- END section for all the maths 
-               //- section for dates of the month
-               table.outer-table
-                  tr
-                     td.two-column
-                        div.section
-                           table
-                              tr
-                                 td
-                                    div.section
-                                       table.same-line
-                                          tr
-                                             td.inner-td
-                                                img(src='./imgs/Group-1-reload.png')
-                                       table.same-line
-                                          tr
-                                             td.inner-td
-                                                h3 47 total 
-                                                p Total Contacts Updated
-                                    div.section
-                                       table.same-line
-                                          tr
-                                             td.inner-td
-                                                img(src='./imgs/Group-1-reload.png')
-                                       table.same-line
-                                          tr
-                                             td.inner-td
-                                                h3 47 total 
-                                                p Total Contacts Updated
-                        div.section
-                           table 
-                              tr
-                                 td
-                                    p Your busiest day was Tues the 23rd. For other people, Monday was the busiest.
-                                    - var list = ['SUN','MON','TUES','WED','THUR','FRI','SAT']
-                                    div.week-wrapper
-                                       for i in list 
-                                          div.day-wrapper
-                                             p=`${i}`
-               //- END section for dates of the month
-               //- section for special people 
-               table.outer-table
-                  tr
-                     td.three-column 
-                        div.section
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    img(src='./imgs/Group-1-reload.png')
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    h3 person name title 
-                                    p about this person 
-                        div.section
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    img(src='./imgs/Group-1-folder.png')
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    h3 person name title 
-                                    p about this person 
-                        div.section
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    img(src='./imgs/Group-1-reload.png')
-                           table.same-line
-                              tr
-                                 td.inner-td
-                                    h3 person name title 
-                                    p about this person 
-               //- END section for special people 
-               //- section above total statistic
-               table.main-table
-                  tr 
-                     td.three-column.text-align-start 
-                        div.section
-                           p hello 1
-                        div.section
-                           p hello 1
-                        div.section
-                           p hello 1
-               //- END section above total statistic
-               //- section total statistic
-               table.outer-table
-                  tr 
-                     td.three-column
-                        div.section
-                           table
-                              tr 
-                                 td.text
-                                    h3 47 total 
-                                    p Total Contacts Updated
-                        div.section
-                           table
-                              tr 
-                                 td.text
-                                    h3 47 total 
-                                    p Total Contacts Updated
-                        div.section
-                           table
-                              tr 
-                                 td.text
-                                    h3 47 total 
-                                    p Total Contacts Updated
-               //- END section total statistic
-               //- section below total statistic
-               table.main-table
-                  tr 
-                     td.one-column
-                        div.section
-                           p only need one
-               //- END section below total statistic 
-               //- Section quotes and tips
-               table.outer-table 
-                  tr 
-                     td.two-column
-                        div.section
-                           table
-                              tr
-                                 td.inner-td
-                                    img(src='./imgs/Group-1-contact.png')
-                           table
-                              tr
-                                 td.inner-td
-                                    p Evercontact has become one of my preferred set of ‘set it and forget it’ tools for getting organized.
-                                    p Sarah Perez, TechCrunch
-                        div.section
-                           table
-                              tr
-                                 td.inner-td
-                                    img(src='./imgs/Group-1-contact.png')
-               //- END Section quotes and tips
-               //- FOOTER 
-               table.outer-table
-                  tr
-                     td.three-column 
-                        div.section
-                           table 
-                              tr
-                                 td.text
-                                    p text text
-                        div.section
-                           table 
-                              tr
-                                 td.text
-                                    p text text
-                        div.section
-                           table 
-                              tr
-                                 td.text
-                                    p text text
-               //- FOOTER 
+head
+	meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	title THIS TESTING EMAIL
+	//- import css/scss stylesheets
+	//- these file names will be replace by gulp with proper css file paths
+
+	link(rel="stylesheet", href="../sass/styles.scss")
+	style.
+		@media screen and (max-width: 500px) {
+			h3 {
+				font-size: 30px !important; 
+				line-height:  36px !important;
+			}
+			p, a {
+				font-size: 24px !important; 
+				line-height:  28px !important;
+			}
+			.outer-table {
+				text-align: center;
+				background-color: red;
+			}
+			//- .math-table .section {
+			//- 	display: inline-block !important;
+			//- 	width: 100% !important;
+			//- 	max-width: 315px !important;
+			//- }
+			//- .math-table .math-symbol.section {
+			//- 	display: block !important;
+			//- 	width: 20px !important;
+			//- 	padding-left: 50% !important;
+			//- }
+		}
+body
+	//- div.wrapper
+	//- 	div.wrapper-inner
+			//- header table
+	table(class='outer-table header-table', cellpadding="0", border="0", cellspacing="0")
+		tr
+			td.content.main-table 
+				table.three-column
+					tr
+						td.content.section
+							p.white-color <strong>Month 2018</strong>
+						td.section
+							img(src="./imgs/company-logo.png")
+						td.section.last
+							ul.social-list
+								li 
+									a(href='/')
+										img(class="social-fb-icon" src='./imgs/social-fb.png')
+								li 
+									a(href='/')
+										img(class="social-twi-icon" src='./imgs/social-twi.png')
+								li 
+									a(href='/')
+										img(class="social-blog-icon" src='./imgs/social-blog.png')
+	//- END header table
+	//- section post header text 
+	table
+		tr
+			td.one-column.main-table
+				table.section 
+					tr 
+						td.content 
+							p You’re the best. Thanks for continuing to rely on Evercontact to keep that address book of yours up-to-date. 
+							br
+							p Let’s take a look at your monthly stats!
+	//- END section post header text 
+	//- section maths, statistic 
+	table.bg-color.math-table 
+		tr
+			td.three-column.outer-table
+				table.section
+					tr
+						td.td-padding
+							img(class="icon" src='./imgs/Group-1-folder.png')
+						td
+							h3.primary-color 47 new
+							p New contacts added to your address book 
+				table.math-symbol.section
+					tr
+						td
+							img( src='./imgs/math_plus.png')
+				table.section
+					tr
+						td.td-padding
+							img(class="icon" src='./imgs/Group-1-contact.png')
+						td
+							h3.primary-color 47 updated
+							p Existing contacts updated with new or missing info
+				table.math-symbol.section
+					tr
+						td
+							img( src='./imgs/math_equal.png')
+				table.section
+					tr
+						td.td-padding
+							img(class="icon" src='./imgs/Group-1-reload.png')
+						td
+							h3.primary-color 47 total
+							p Total contacts Updated
+		tr
+			td.three-column.outer-table
+				table.section
+					tr
+						td.td-padding
+							img(class="icon" src='./imgs/Group-1-people.png')
+						td
+							h3.primary-color 47 contacts
+							p New contacts added to your address book
+				table.math-symbol.section
+					tr
+						td
+							img( src='./imgs/math_multi.png')
+				table.section
+					tr
+						td.td-padding
+							img(class="icon" src='./imgs/Group-1-clock.png')
+						td
+							h3.primary-color 5min per
+							p New contacts added to your address book
+				table.math-symbol.section
+					tr
+						td
+							img( src='./imgs/math_equal.png')
+				table.section
+					tr
+						td.td-padding
+							img(class="icon" src='./imgs/Group-1-time.png')
+						td
+							h3.primary-color 24hr saved
+							p Time saved using Evercontact!
+	//- END section for all the maths
+	//- section for dates of the month
+	table.monthly-table 
+		tr
+			td.two-column.main-table
+				table.section
+					tr
+						td.td-padding
+							img(class='icon' src='./imgs/Group-2-mailbox.png')
+						td.content
+							h3.primary-color 47% increase
+							p Up X% over last month
+				table.section.last
+					tr.content
+						td.td-padding
+							img(class='icon' src='./imgs/Group-2-inmail.png')
+						td
+							h3.primary-color 47 emails
+							p Total emails received
+				//- div.section
+				//- 	table
+				//- 		tr
+				//- 			td
+				//- 				p Your busiest day was Tues the 23rd. For other people, Monday was the busiest.
+				//- 				- var list = ['SUN','MON','TUES','WED','THUR','FRI','SAT']
+				//- 				div.week-wrapper
+				//- 					for i in list
+				//- 						div.day-wrapper
+				//- 							p=`${i}`
+	//- END section for dates of the month
+	//- section for special people
+	table.people-table.bg-color
+		tr
+			td.three-column.outer-table
+				table.section
+					tr
+						td.td-padding
+							img(class='icon' src='./imgs/Group-3-star.png')
+						td
+							p.primary-color person name - title
+							p is your most popular contact
+				table.section
+					tr
+						td.td-padding
+							img(class='icon' src='./imgs/Group-3-phone.png')
+						td
+							p.primary-color person name - title
+							p has a new phone number
+				table.section
+					tr
+						td.td-padding
+							img(class='icon' src='./imgs/Group-3-mail.png')
+						td
+							p.primary-color person name - title
+							p has a new email address
+	//- 🤟 END section for special people
+	//- section above total statistic
+	table.above_statistic
+		tr
+			td.three-column.main-table
+				table.section
+					tr
+						td
+							p Your Status:
+				table.section
+					tr
+						td
+							p <strong>Rank: OG</strong>
+				table.section
+					tr
+						td
+							p Member since Month day, year
+	//- END section above total statistic
+	//- section total statistic
+	table(class="total-statistic" cellpadding="0", border="0", cellspacing="0")
+		tr
+			td.outer-table
+				table
+					tr
+						td.border-wrapper.three-column
+							table.section.first
+								tr
+									td.padding
+										h3.primary-color 47,000
+										p Total contacts added
+							table.section
+								tr
+									td.padding
+										h3.primary-color 47,000
+										p Total contacts updated
+							table.section.last
+								tr
+									td.padding
+										h3.primary-color 47,000
+										p Grand total
+	//- END section total statistic
+	//- section below total statistic
+	table.below_statistic
+		tr
+			td.main-table
+				p <strong>Plan: Essentials</strong>
+				<p><a name='test link' href='/'></a>test link</p> 
+					//- a(name="" class="primary-color" href='/')
+					
+	//- END section below total statistic
+	//- Section quotes and tips
+	table.quotes_and_tips
+		tr
+			td.two-column.outer-table
+				table.section.bg-color
+					tr
+						td.quotes-icon-padding
+							img(class="icon-quotes" src='./imgs/Group-4-quotes.png')
+						td.padding
+							p Evercontact’s become my ‘set it + forget it’ tool for getting organized.
+							br
+							p <strong>Sarah Perez, TechCrunch</strong>
+				table.section.bg-primary-color
+					tr
+						td.padding
+							p.white-color <em><strong>Pro-Tip:</strong> Boost your sales conversions with these three key steps</em>
+							//- img(class='' src='./imgs/Optimized-pro-tip.png')
+	//- END Section quotes and tips
+	//- FOOTER
+	table.footer
+		tr
+			//- td.three-column.outer-table
+			//- 	table.section
+			//- 		tr
+			//- 			td.content
+			//- 				p © 2018 One More Company, Inc.
+			//- 	table.section
+			//- 		tr
+			//- 			td.content
+			//- 				a(class="" href='/')="Unsubscribe from this list"
+			//- 	table.section
+			//- 		tr
+			//- 			td.content
+			//- 				p 61 Broadway
+			//- 				p New York, NY 10006
+			td.outer-table
+				table.section 
+					tr
+						td 
+							img(class="icon-made-in-ny" src='./imgs/made-in-ny.png')
+							p © 2018 One More Company, Inc.
+							a(class="" href='/')="Unsubscribe from this list"
+							p 61 Broadway New York, NY 10006
+	//- FOOTER
