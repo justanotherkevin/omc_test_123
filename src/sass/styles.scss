@@ -10,21 +10,18 @@ $border-color: #c1c1c1;
   padding: 0;
 }
 body {
-  // padding: 15px;
   background-color: #fff;
   table-layout: fixed;
-  width: 100%;
-  max-width: 600px;
+  // width: 100%;
+  width: 600px;
   margin: 0 auto;
 }
 table {
   border-spacing: 0px 0px;
   border-collapse: collapse;
-  // border: 1px solid black;
   font-size: 0;
   line-height: 0;
   width: 100%;
-  // outline-style: solid;
 }
 table,
 td {
@@ -72,6 +69,11 @@ img {
 .icon {
   width: 32px;
 }
+.main-table,
+.outer-table {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
 .main-table {
   width: 100%;
   padding-right: 50px;
@@ -82,13 +84,6 @@ img {
   padding-right: 20px;
   padding-left: 20px;
 }
-// column styles
-.one-column,
-.two-column,
-.three-column {
-  padding-top: 22px;
-  padding-bottom: 22px;
-}
 .one-column {
   .section {
     width: 100%;
@@ -97,18 +92,14 @@ img {
 .two-column {
   .section {
     width: 50%;
-    // max-width: 300px;
     display: inline-block;
-    // display: table-cell;
     vertical-align: middle;
   }
 }
 .three-column {
   .section {
     width: 33%;
-    // max-width: 200px;
     display: inline-block;
-    // display: table-cell;
     vertical-align: middle;
   }
 }
@@ -120,96 +111,61 @@ img {
 .td-padding {
   padding: 10px;
 }
-// .week-wrapper {
-//   .day-wrapper {
-//     display: inline-block;
-//     padding: 10px;
-//   }
-// }
-
 // header table,
 .header-table {
   background-color: $primary-color;
   .three-column {
     .section {
       display: table-cell;
-      // display: inline-block;
-      padding: 25px 0;
-      // text-align: center;
-      &.last {
-        text-align: end;
-      }
     }
   }
   .header-logo-td img {
     width: 100%;
   }
   .social-list {
-    list-style: none;
     padding-left: 15px;
-    li {
-      // display: inline-block;
-      display: table-cell;
-      a {
-        padding: 10px;
-        .social-fb-icon {
-          width: 10px;
-          height: 20px;
-        }
-        .social-twi-icon {
-          width: 25px;
-          height: 20px;
-        }
-        .social-blog-icon {
-          width: 20px;
-          height: 20px;
-        }
+    a {
+      padding: 10px;
+      .social-fb-icon {
+        width: 10px;
+        height: 20px;
+      }
+      .social-twi-icon {
+        width: 25px;
+        height: 20px;
+      }
+      .social-blog-icon {
+        width: 20px;
+        height: 20px;
       }
     }
   }
 }
 // Math table
 .math-table {
+  .last-row {
+    padding-top: 20px;
+  }
   .three-column {
-    // text-align: center;
     .section {
       width: 30%;
-      // max-width: 175px;
-      // width: 100%;
-      // display: inline-block;
       display: table-cell;
       vertical-align: middle;
       &.math-symbol {
         width: 5%;
         padding: 0 5px;
-        display: table-cell;
-        // display: inline-block;
-        vertical-align: middle;
       }
-    }
-    .content {
-      width: 65%;
     }
   }
 }
 // Monthly table
 .monthly-table {
-  // max-width: 500px;
   .two-column {
     .section {
       width: 50%;
-      padding: 0 20px;
       display: table-cell;
-      // display: inline-block;
-      // text-align: center;
       &.last {
         border-right: 0;
-      }
-      .td-padding {
-        padding-left: 10px;
-      }
-      .content {
-        // text-align: left;
       }
     }
   }
@@ -217,8 +173,9 @@ img {
 // People-table
 .people-table {
   .three-column {
-    .content {
-      max-width: 70%;
+    .section {
+      display: table-cell;
+      padding-right: 15px;
     }
   }
 }
@@ -227,12 +184,11 @@ img {
   .outer-table {
     padding-top: 15px;
     padding-bottom: 15px;
-    .border-wrapper {
+    &.border-wrapper {
       border: 1px solid $border-color;
       .section {
         border-right: 1px solid $border-color;
         display: table-cell;
-        // display: inline-block;
         vertical-align: top;
         &.first {
           padding-left: 13px;
@@ -252,10 +208,15 @@ img {
   .main-table {
     padding-bottom: 0px;
   }
+  .section {
+    display: table-cell;
+    padding-bottom: 10px;
+  }
 }
 // below_statistic table
 .below_statistic {
   .main-table {
+    padding-top: 10px;
     & > * {
       display: inline-block;
     }
@@ -269,15 +230,18 @@ img {
   .outer-table {
     padding-right: 0;
     padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 0;
   }
-  .two-column > * {
-    // padding: 0;
-    // margin: 22px 0;
+  .two-column .section {
     display: table-cell;
-    // display: inline-block;
   }
   .padding {
     padding: 20px 25px;
+    &.extra {
+      padding-top: 45px;
+      padding-bottom: 45px;
+    }
   }
   .quotes-icon-padding {
     padding: 10px 0px 10px 35px;
@@ -296,8 +260,19 @@ img {
     display: inline-block;
     vertical-align: middle;
   }
-  .section {
+  .outer-table {
+    padding-bottom: 0;
     text-align: center;
+  }
+  .section {
+    display: table-cell;
+    &.first,
+    &.last {
+      width: 40%;
+    }
+    &.second {
+      width: 20%;
+    }
   }
   .icon-made-in-ny {
     width: 20px;

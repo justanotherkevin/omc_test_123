@@ -5,8 +5,7 @@
 body {
   background-color: #fff;
   table-layout: fixed;
-  width: 100%;
-  max-width: 600px;
+  width: 600px;
   margin: 0 auto; }
 
 table {
@@ -62,6 +61,11 @@ img {
 .icon {
   width: 32px; }
 
+.main-table,
+.outer-table {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+
 .main-table {
   width: 100%;
   padding-right: 50px;
@@ -71,12 +75,6 @@ img {
   width: 100%;
   padding-right: 20px;
   padding-left: 20px; }
-
-.one-column,
-.two-column,
-.three-column {
-  padding-top: 22px;
-  padding-bottom: 22px; }
 
 .one-column .section {
   width: 100%; }
@@ -101,28 +99,25 @@ img {
 .header-table {
   background-color: #63b4b5; }
   .header-table .three-column .section {
-    display: table-cell;
-    padding: 25px 0; }
-    .header-table .three-column .section.last {
-      text-align: end; }
+    display: table-cell; }
   .header-table .header-logo-td img {
     width: 100%; }
   .header-table .social-list {
-    list-style: none;
     padding-left: 15px; }
-    .header-table .social-list li {
-      display: table-cell; }
-      .header-table .social-list li a {
-        padding: 10px; }
-        .header-table .social-list li a .social-fb-icon {
-          width: 10px;
-          height: 20px; }
-        .header-table .social-list li a .social-twi-icon {
-          width: 25px;
-          height: 20px; }
-        .header-table .social-list li a .social-blog-icon {
-          width: 20px;
-          height: 20px; }
+    .header-table .social-list a {
+      padding: 10px; }
+      .header-table .social-list a .social-fb-icon {
+        width: 10px;
+        height: 20px; }
+      .header-table .social-list a .social-twi-icon {
+        width: 25px;
+        height: 20px; }
+      .header-table .social-list a .social-blog-icon {
+        width: 20px;
+        height: 20px; }
+
+.math-table .last-row {
+  padding-top: 20px; }
 
 .math-table .three-column .section {
   width: 30%;
@@ -130,59 +125,62 @@ img {
   vertical-align: middle; }
   .math-table .three-column .section.math-symbol {
     width: 5%;
-    padding: 0 5px;
-    display: table-cell;
-    vertical-align: middle; }
-
-.math-table .three-column .content {
-  width: 65%; }
+    padding: 0 5px; }
 
 .monthly-table .two-column .section {
   width: 50%;
-  padding: 0 20px;
   display: table-cell; }
   .monthly-table .two-column .section.last {
     border-right: 0; }
-  .monthly-table .two-column .section .td-padding {
-    padding-left: 10px; }
 
-.people-table .three-column .content {
-  max-width: 70%; }
+.people-table .three-column .section {
+  display: table-cell;
+  padding-right: 15px; }
 
 .total-statistic .outer-table {
   padding-top: 15px;
   padding-bottom: 15px; }
-  .total-statistic .outer-table .border-wrapper {
+  .total-statistic .outer-table.border-wrapper {
     border: 1px solid #c1c1c1; }
-    .total-statistic .outer-table .border-wrapper .section {
+    .total-statistic .outer-table.border-wrapper .section {
       border-right: 1px solid #c1c1c1;
       display: table-cell;
       vertical-align: top; }
-      .total-statistic .outer-table .border-wrapper .section.first {
+      .total-statistic .outer-table.border-wrapper .section.first {
         padding-left: 13px; }
-      .total-statistic .outer-table .border-wrapper .section.last {
+      .total-statistic .outer-table.border-wrapper .section.last {
         border-right: none; }
-      .total-statistic .outer-table .border-wrapper .section .padding {
+      .total-statistic .outer-table.border-wrapper .section .padding {
         padding: 0 20px; }
 
 .above_statistic .main-table {
   padding-bottom: 0px; }
 
-.below_statistic .main-table > * {
-  display: inline-block; }
+.above_statistic .section {
+  display: table-cell;
+  padding-bottom: 10px; }
 
-.below_statistic .main-table a {
-  padding: 0 5px; }
+.below_statistic .main-table {
+  padding-top: 10px; }
+  .below_statistic .main-table > * {
+    display: inline-block; }
+  .below_statistic .main-table a {
+    padding: 0 5px; }
 
 .quotes_and_tips .outer-table {
   padding-right: 0;
-  padding-left: 0; }
+  padding-left: 0;
+  padding-top: 0;
+  padding-bottom: 0; }
 
-.quotes_and_tips .two-column > * {
+.quotes_and_tips .two-column .section {
   display: table-cell; }
 
 .quotes_and_tips .padding {
   padding: 20px 25px; }
+  .quotes_and_tips .padding.extra {
+    padding-top: 45px;
+    padding-bottom: 45px; }
 
 .quotes_and_tips .quotes-icon-padding {
   padding: 10px 0px 10px 35px; }
@@ -199,8 +197,16 @@ img {
   display: inline-block;
   vertical-align: middle; }
 
-.footer .section {
+.footer .outer-table {
+  padding-bottom: 0;
   text-align: center; }
+
+.footer .section {
+  display: table-cell; }
+  .footer .section.first, .footer .section.last {
+    width: 40%; }
+  .footer .section.second {
+    width: 20%; }
 
 .footer .icon-made-in-ny {
   width: 20px;

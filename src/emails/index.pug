@@ -1,27 +1,13 @@
 doctype html
 html
 head
-	meta(name="viewport" content="width=device-width, initial-scale=1.0")
+	//- meta(name="viewport" content="width=device-width, initial-scale=1.0")
 	title THIS TESTING EMAIL
 	//- import css/scss stylesheets
 	//- these file names will be replace by gulp with proper css file paths
 
 	link(rel="stylesheet", href="../sass/styles.scss")
-	style.
-		@media screen and (max-width: 500px) {
-			h3 {
-				font-size: 30px !important; 
-				line-height:  36px !important;
-			}
-			p, a {
-				font-size: 24px !important; 
-				line-height:  28px !important;
-			}
-			.outer-table {
-				text-align: center;
-				background-color: red;
-			}
-		}
+
 body
 	table(class='outer-table header-table', cellpadding="0", border="0", cellspacing="0")
 		tr
@@ -32,35 +18,36 @@ body
 							p.white-color <strong>Month 2018</strong>
 						td.section
 							img(src='./imgs/company-logo.png')
-						td.section.last
-							ul.social-list
-								li 
-									a(href='/')
-										img(
-											class='social-fb-icon' 
-											src='./imgs/social-fb.png'
-											alt='facebook-link'
-											)
-								li 
-									a(href='/')
-										img(
-											class='social-twi-icon'
-											src='./imgs/social-twi.png'
-											alt='twitter-link'
-											)
-								li 
-									a(href='/')
-										img(
-											class='social-blog-icon'
-											src='./imgs/social-blog.png'
-											alt='blog-link'
-											)
+						td.section.last.social-list
+							table
+								tr 
+									td 
+										a(href='/')
+											img(
+												class='social-fb-icon' 
+												src='./imgs/social-fb.png'
+												alt='facebook-link'
+												)
+									td
+										a(href='/')
+											img(
+												class='social-twi-icon'
+												src='./imgs/social-twi.png'
+												alt='twitter-link'
+												)
+									td 
+										a(href='/')
+											img(
+												class='social-blog-icon'
+												src='./imgs/social-blog.png'
+												alt='blog-link'
+												)
 	//- END header table
 	//- section post header text 
-	table
+	table.post-header-text
 		tr
-			td.one-column.main-table
-				table.section 
+			td.main-table
+				table.one-column
 					tr 
 						td.content 
 							p You’re the best. Thanks for continuing to rely on Evercontact to keep that address book of yours up-to-date. 
@@ -70,148 +57,181 @@ body
 	//- section maths, statistic 
 	table.bg-color.math-table 
 		tr
-			td.three-column.outer-table
-				table.section
+			td.outer-table
+				table
 					tr
-						td.td-padding
-							img(class="icon" src='./imgs/Group-1-folder.png')
-						td
-							h3.primary-color 47 new
-							p New contacts added to your address book 
-				table.math-symbol.section
+						td.first-row
+							table.three-column 
+								tr
+									td.section
+										table
+											tr
+												td.td-padding
+													img(class="icon" src='./imgs/Group-1-folder.png')
+												td
+													h3.primary-color 47 new
+													p New contacts added to your address book 
+									td.section.math-symbol.section
+										table
+											tr
+												td
+													img( src='./imgs/math_plus.png')
+									td.section
+										table
+											tr
+												td.td-padding
+													img(class="icon" src='./imgs/Group-1-contact.png')
+												td
+													h3.primary-color 47 updated
+													p Existing contacts updated with new or missing info
+									td.section.math-symbol.section
+										table
+											tr
+												td
+													img( src='./imgs/math_equal.png')
+									td.section
+										table
+											tr
+												td.td-padding
+													img(class="icon" src='./imgs/Group-1-reload.png')
+												td
+													h3.primary-color 47 total
+													p Total contacts Updated
 					tr
-						td
-							img( src='./imgs/math_plus.png')
-				table.section
-					tr
-						td.td-padding
-							img(class="icon" src='./imgs/Group-1-contact.png')
-						td
-							h3.primary-color 47 updated
-							p Existing contacts updated with new or missing info
-				table.math-symbol.section
-					tr
-						td
-							img( src='./imgs/math_equal.png')
-				table.section
-					tr
-						td.td-padding
-							img(class="icon" src='./imgs/Group-1-reload.png')
-						td
-							h3.primary-color 47 total
-							p Total contacts Updated
-		tr
-			td.three-column.outer-table
-				table.section
-					tr
-						td.td-padding
-							img(class="icon" src='./imgs/Group-1-people.png')
-						td
-							h3.primary-color 47 contacts
-							p New contacts added to your address book
-				table.math-symbol.section
-					tr
-						td
-							img( src='./imgs/math_multi.png')
-				table.section
-					tr
-						td.td-padding
-							img(class="icon" src='./imgs/Group-1-clock.png')
-						td
-							h3.primary-color 5min per
-							p New contacts added to your address book
-				table.math-symbol.section
-					tr
-						td
-							img( src='./imgs/math_equal.png')
-				table.section
-					tr
-						td.td-padding
-							img(class="icon" src='./imgs/Group-1-time.png')
-						td
-							h3.primary-color 24hr saved
-							p Time saved using Evercontact!
+						td.last-row
+							table.three-column
+								tr
+									td.section
+										table
+											tr
+												td.td-padding
+													img(class="icon" src='./imgs/Group-1-people.png')
+												td
+													h3.primary-color 47 contacts
+													p New contacts added to your address book
+									td.section.math-symbol
+										table
+											tr
+												td
+													img( src='./imgs/math_multi.png')
+									td.section
+										table
+											tr
+												td.td-padding
+													img(class="icon" src='./imgs/Group-1-clock.png')
+												td
+													h3.primary-color 5min per
+													p New contacts added to your address book
+									td.section.math-symbol
+										table
+											tr
+												td
+													img( src='./imgs/math_equal.png')
+									td.section
+										table
+											tr
+												td.td-padding
+													img(class="icon" src='./imgs/Group-1-time.png')
+												td
+													h3.primary-color 24hr saved
+													p Time saved using Evercontact!
 	//- END section for all the maths
 	//- section for dates of the month
 	table.monthly-table 
 		tr
-			td.two-column.main-table
-				table.section
+			td.main-table
+				table.two-column
 					tr
-						td.td-padding
-							img(class='icon' src='./imgs/Group-2-mailbox.png')
-						td.content
-							h3.primary-color 47% increase
-							p Up X% over last month
-				table.section.last
-					tr.content
-						td.td-padding
-							img(class='icon' src='./imgs/Group-2-inmail.png')
-						td
-							h3.primary-color 47 emails
-							p Total emails received
+						td.section
+							table
+								tr
+									td.td-padding
+										img(class='icon' src='./imgs/Group-2-mailbox.png')
+									td
+										h3.primary-color 47% increase
+										p Up X% over last month
+						td.section
+							table.last
+								tr.content
+									td.td-padding
+										img(class='icon' src='./imgs/Group-2-inmail.png')
+									td
+										h3.primary-color 47 emails
+										p Total emails received
 	//- END section for dates of the month
 	//- section for special people
 	table.people-table.bg-color
 		tr
 			td.three-column.outer-table
-				table.section
+				table.three-column
 					tr
-						td.td-padding
-							img(class='icon' src='./imgs/Group-3-star.png')
-						td
-							p.primary-color person name - title
-							p is your most popular contact
-				table.section
-					tr
-						td.td-padding
-							img(class='icon' src='./imgs/Group-3-phone.png')
-						td
-							p.primary-color person name - title
-							p has a new phone number
-				table.section
-					tr
-						td.td-padding
-							img(class='icon' src='./imgs/Group-3-mail.png')
-						td
-							p.primary-color person name - title
-							p has a new email address
+						td.section
+							table
+								tr
+									td.td-padding
+										img(class='icon' src='./imgs/Group-3-star.png')
+									td
+										p.primary-color person name - title
+										p is your most popular contact
+						td.section
+							table
+								tr
+									td.td-padding
+										img(class='icon' src='./imgs/Group-3-phone.png')
+									td
+										p.primary-color person name - title
+										p has a new phone number
+						td.section
+							table
+								tr
+									td.td-padding
+										img(class='icon' src='./imgs/Group-3-mail.png')
+									td
+										p.primary-color person name - title
+										p has a new email address
 	//- 🤟 END section for special people
 	//- section above total statistic
 	table.above_statistic
 		tr
-			td.three-column.main-table
-				table.section
+			td.main-table
+				table.three-column
 					tr
-						td
-							p Your Status:
-				table.section
-					tr
-						td
-							p <strong>Rank: OG</strong>
-				table.section
-					tr
-						td
-							p Member since Month day, year
+						td.section
+							table
+								tr
+									td
+										p Your Status:
+						td.section
+							table
+								tr
+									td
+										p <strong>Rank: OG</strong>
+						td.section
+							table
+								tr
+									td
+										p Member since Month day, year
 	//- END section above total statistic
 	//- section total statistic
 	table(class="total-statistic" cellpadding="0", border="0", cellspacing="0")
 		tr
-			td.outer-table
-				table
+			td.outer-table.border-wrapper
+				table.three-column
 					tr
-						td.border-wrapper.three-column
-							table.section.first
+						td.section.first
+							table
 								tr
 									td.padding
 										h3.primary-color 47,000
 										p Total contacts added
-							table.section
+						td.section
+							table
 								tr
 									td.padding
 										h3.primary-color 47,000
 										p Total contacts updated
-							table.section.last
+						td.section.last
+							table
 								tr
 									td.padding
 										h3.primary-color 47,000
@@ -221,39 +241,62 @@ body
 	table.below_statistic
 		tr
 			td.main-table
-				p <strong>Plan: Essentials</strong>
-				a(class="primary-color" href="http://www.yahoo.com")="(upgrade)"
-
-					//- a(name="" class="primary-color" href='/')
+				table.single-column
+					tr
+						td.section
+							table
+								tr
+									td
+										p <strong>Plan: Essentials </strong>
+									td
+										p 
+											a(class="primary-color" href="http://www.yahoo.com")="(upgrade)"
 					
 	//- END section below total statistic
 	//- Section quotes and tips
 	table.quotes_and_tips
 		tr
-			td.two-column.outer-table
-				table.section.bg-color
+			td.outer-table
+				table.bg-color.two-column
 					tr
-						td.quotes-icon-padding
-							img(class="icon-quotes" src='./imgs/Group-4-quotes.png')
-						td.padding
-							p Evercontact’s become my ‘set it + forget it’ tool for getting organized.
-							br
-							p <strong>Sarah Perez, TechCrunch</strong>
-				table.section.bg-primary-color
-					tr
-						td.padding
-							p.white-color <em><strong>Pro-Tip:</strong> Boost your sales conversions with these three key steps</em>
-							//- img(class='' src='./imgs/Optimized-pro-tip.png')
+						td.section
+							table 
+								tr
+									td.quotes-icon-padding
+										img(class="icon-quotes" src='./imgs/Group-4-quotes.png')
+									td.padding
+										p Evercontact’s become my ‘set it + forget it’ tool for getting organized.
+										br
+										p <strong>Sarah Perez, TechCrunch</strong>
+						td.section
+							table.bg-primary-color
+								tr
+									td.padding.extra
+										p.white-color <em><strong>Pro-Tip:</strong> Boost your sales conversions with these three key steps</em>
 	//- END Section quotes and tips
 	//- FOOTER
 	table.footer
 		tr
 			td.outer-table
-				table.section 
+				table.three-column
 					tr
-						td 
-							img(class="icon-made-in-ny" src='./imgs/made-in-ny.png')
-							p © 2018 One More Company, Inc.
-							a(class="" href="http://www.yahoo.com")="Unsubscribe from this list"
-							p 61 Broadway New York, NY 10006
+						td.section.first
+							table
+								tr
+									td 
+										img(class="icon-made-in-ny" src='./imgs/made-in-ny.png')
+									td 
+										p © 2018 One More Company, Inc.
+						td.section.second
+							table
+								tr
+									td 
+										p 
+											a(class="" href="http://www.yahoo.com")="Unsubscribe"
+						td.section.last
+							table
+								tr
+									td 
+										p 61 Broadway New York, NY 10006
+									
 	//- FOOTER
