@@ -39,7 +39,7 @@ gulp.task('build', ['compileSass'], function() {
       .pipe(replace(new RegExp('/sass/(.+).scss', 'ig'), '/css/$1.css'))
 
       // compile using Pug
-      .pipe(pug({ doctype: 'html', pretty: true }))
+      .pipe(pug({ doctype: 'html', pretty: false }))
 
       // inline CSS
       .pipe(inlineCss({ preserveMediaQueries: true }))
