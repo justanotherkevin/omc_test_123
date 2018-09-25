@@ -33,17 +33,24 @@ br {
 }
 p {
   font-family: Helvetica;
-  font-size: 14px;
-  line-height: 17px;
+  font-size: 18px;
+  line-height: 20px;
   font-weight: 300;
   color: $font-color;
 }
 h3 {
   font-family: Helvetica;
-  font-size: 20px;
-  line-height: 24px;
+  font-size: 28px;
+  line-height: 32px;
+  font-weight: 500;
   padding-bottom: 5px;
+  padding-top: 5px;
   color: $font-color;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 150px;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 a {
   font-family: Helvetica;
@@ -66,8 +73,14 @@ img {
 .white-color {
   color: #fff;
 }
+.bg-gradient {
+  background-image: url('./imgs/Rectangle-bg.png');
+  background-position: center;
+  background-size: cover;
+}
 .icon {
-  width: 32px;
+  // width: 32px;
+  width: 52px;
 }
 .main-table,
 .outer-table {
@@ -110,10 +123,11 @@ img {
 }
 .td-padding {
   padding: 10px;
+  text-align: center;
 }
 // header table,
 .header-table {
-  background-color: $primary-color;
+  // background-color: $primary-color;
   .three-column {
     .section {
       display: table-cell;
@@ -175,7 +189,20 @@ img {
   .three-column {
     .section {
       display: table-cell;
-      padding-right: 15px;
+      padding-right: 10px;
+      padding-right: 10px;
+      .name {
+        padding-top: 10px;
+        padding-bottom: 10px;
+        font-weight: 400;
+        max-width: 150px;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .content {
+        max-width: 150px;
+        overflow: hidden;
+      }
     }
   }
 }
@@ -190,6 +217,7 @@ img {
         border-right: 1px solid $border-color;
         display: table-cell;
         vertical-align: top;
+        max-width: 150px;
         &.first {
           padding-left: 13px;
         }
@@ -198,6 +226,11 @@ img {
         }
         .padding {
           padding: 0 20px;
+          h3 {
+            max-width: 150px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+          }
         }
       }
     }

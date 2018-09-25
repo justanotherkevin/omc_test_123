@@ -7,36 +7,38 @@ head
 	//- these file names will be replace by gulp with proper css file paths
 
 	link(rel="stylesheet", href="../sass/styles.scss")
+	//- - var data = { userStartDate: '{{user_start_date}}', currentMonth: '{{current_month}}', newContact: '{{new_contact}}', updatedContact: '{{updated_contact}}',totalContact: '{{total_contact}}', hourSaved:'{{hours_saved}}', monthlyIncrease: '{{monthly_email_increase}}', monthlyReceived:'{{monthly_email_received}}', monthlyPopular:'{{monthly_most_popular_person}}', monthlyNewPhoneNumber:'{{monthly_new_phone_person}}', monthlyNewEmail:'{{monthly_new_email_person}}', lifeTimeContactsAdded:'{{lifetime_contacts_added}}', lifeTimeContactsUpdated:'{{lifetime_contacts_updated}}',lifeTimeContactsTotal:'{{lifetime_contacts_total}}' }
+	- var data = { userStartDate: 99, currentMonth: '01/01/18', newContact: 99, updatedContact: 99,totalContact: 99, hourSaved:99, monthlyIncrease: 99, monthlyReceived:99, monthlyPopular:'joan veryveryverylongname', monthlyNewPhoneNumber:'joan veryveryverylongname', monthlyNewEmail:'joan veryveryverylongname', lifeTimeContactsAdded:99, lifeTimeContactsUpdated:99,lifeTimeContactsTotal:99 }
 
 body
 	table(class='outer-table header-table', cellpadding="0", border="0", cellspacing="0")
 		tr
-			td.content.main-table 
+			td.content.main-table.bg-gradient
 				table.three-column
 					tr
 						td.content.section
-							p.white-color <strong>Month 2018</strong>
+							p.white-color <strong>#{data.currentMonth}</strong>
 						td.section
 							img(src='./imgs/company-logo.png')
 						td.section.last.social-list
 							table
 								tr 
 									td 
-										a(href='/')
+										a(href='https://www.facebook.com/Evercontact1')
 											img(
 												class='social-fb-icon' 
 												src='./imgs/social-fb.png'
 												alt='facebook-link'
 												)
 									td
-										a(href='/')
+										a(href='https://twitter.com/evercontact')
 											img(
 												class='social-twi-icon'
 												src='./imgs/social-twi.png'
 												alt='twitter-link'
 												)
 									td 
-										a(href='/')
+										a(href='http://blog.evercontact.com/feed/')
 											img(
 												class='social-blog-icon'
 												src='./imgs/social-blog.png'
@@ -67,10 +69,21 @@ body
 										table
 											tr
 												td.td-padding
-													img(class="icon" src='./imgs/Group-1-folder.png')
+													img(class="icon" src='./imgs/Group-1-reload.png')
+													h3.primary-color #{data.totalContact}
+													p Total Contacts
+									td.section.math-symbol.section
+										table
+											tr
 												td
-													h3.primary-color 47 new
-													p New contacts added to your address book 
+													img( src='./imgs/math_equal.png')
+									td.section
+										table
+											tr
+												td.td-padding
+													img(class="icon" src='./imgs/Group-1-folder.png')
+													h3.primary-color #{data.newContact}
+													p Newly Added
 									td.section.math-symbol.section
 										table
 											tr
@@ -81,22 +94,8 @@ body
 											tr
 												td.td-padding
 													img(class="icon" src='./imgs/Group-1-contact.png')
-												td
-													h3.primary-color 47 updated
-													p Existing contacts updated with new or missing info
-									td.section.math-symbol.section
-										table
-											tr
-												td
-													img( src='./imgs/math_equal.png')
-									td.section
-										table
-											tr
-												td.td-padding
-													img(class="icon" src='./imgs/Group-1-reload.png')
-												td
-													h3.primary-color 47 total
-													p Total contacts Updated
+													h3.primary-color #{data.updatedContact}
+													p Updated Existing
 					tr
 						td.last-row
 							table.three-column
@@ -105,10 +104,21 @@ body
 										table
 											tr
 												td.td-padding
-													img(class="icon" src='./imgs/Group-1-people.png')
+													img(class="icon" src='./imgs/Group-1-time.png')
+													h3.primary-color #{data.hourSaved}
+													p Hours Saved
+									td.section.math-symbol
+										table
+											tr
 												td
-													h3.primary-color 47 contacts
-													p New contacts added to your address book
+													img( src='./imgs/math_equal.png')
+									td.section
+										table
+											tr
+												td.td-padding
+													img(class="icon" src='./imgs/Group-1-people.png')
+													h3.primary-color #{data.newContact}
+													p Total Contacts 
 									td.section.math-symbol
 										table
 											tr
@@ -119,22 +129,8 @@ body
 											tr
 												td.td-padding
 													img(class="icon" src='./imgs/Group-1-clock.png')
-												td
-													h3.primary-color 5min per
-													p New contacts added to your address book
-									td.section.math-symbol
-										table
-											tr
-												td
-													img( src='./imgs/math_equal.png')
-									td.section
-										table
-											tr
-												td.td-padding
-													img(class="icon" src='./imgs/Group-1-time.png')
-												td
-													h3.primary-color 24hr saved
-													p Time saved using Evercontact!
+													h3.primary-color 5
+													p Min. Per
 	//- END section for all the maths
 	//- section for dates of the month
 	table.monthly-table 
@@ -142,22 +138,22 @@ body
 			td.main-table
 				table.two-column
 					tr
-						td.section
+						td.section.td-padding
 							table
-								tr
-									td.td-padding
-										img(class='icon' src='./imgs/Group-2-mailbox.png')
-									td
-										h3.primary-color 47% increase
-										p Up X% over last month
-						td.section
-							table.last
 								tr.content
 									td.td-padding
 										img(class='icon' src='./imgs/Group-2-inmail.png')
 									td
-										h3.primary-color 47 emails
+										h3.primary-color #{data.monthlyReceived} emails
 										p Total emails received
+						td.section.td-padding
+							table.last
+								tr.content
+									td.td-padding
+										img(class='icon' src='./imgs/Group-2-mailbox.png')
+									td
+										h3.primary-color #{data.monthlyIncrease}% increase
+										p Up X% over last month
 	//- END section for dates of the month
 	//- section for special people
 	table.people-table.bg-color
@@ -168,26 +164,23 @@ body
 						td.section
 							table
 								tr
-									td.td-padding
+									td.td-padding.content
 										img(class='icon' src='./imgs/Group-3-star.png')
-									td
-										p.primary-color person name - title
+										p.primary-color.name #{data.monthlyPopular}
 										p is your most popular contact
 						td.section
 							table
 								tr
-									td.td-padding
+									td.td-padding.content
 										img(class='icon' src='./imgs/Group-3-phone.png')
-									td
-										p.primary-color person name - title
+										p.primary-color.name #{data.monthlyNewPhoneNumber}
 										p has a new phone number
 						td.section
 							table
 								tr
-									td.td-padding
+									td.td-padding.content
 										img(class='icon' src='./imgs/Group-3-mail.png')
-									td
-										p.primary-color person name - title
+										p.primary-color.name #{data.monthlyNewEmail}
 										p has a new email address
 	//- 🤟 END section for special people
 	//- section above total statistic
@@ -210,7 +203,7 @@ body
 							table
 								tr
 									td
-										p Member since Month day, year
+										p Member since #{data.userStartDate}
 	//- END section above total statistic
 	//- section total statistic
 	table(class="total-statistic" cellpadding="0", border="0", cellspacing="0")
@@ -222,19 +215,19 @@ body
 							table
 								tr
 									td.padding
-										h3.primary-color 47,000
+										h3.primary-color #{data.lifeTimeContactsAdded}
 										p Total contacts added
 						td.section
 							table
 								tr
 									td.padding
-										h3.primary-color 47,000
+										h3.primary-color #{data.lifeTimeContactsUpdated}
 										p Total contacts updated
 						td.section.last
 							table
 								tr
 									td.padding
-										h3.primary-color 47,000
+										h3.primary-color #{data.lifeTimeContactsTotal}
 										p Grand total
 	//- END section total statistic
 	//- section below total statistic
@@ -250,7 +243,7 @@ body
 										p <strong>Plan: Essentials </strong>
 									td
 										p 
-											a(class="primary-color" href="http://www.yahoo.com")="(upgrade)"
+											a(class="primary-color" href="https://evercontact.com/pricing")="(upgrade)"
 					
 	//- END section below total statistic
 	//- Section quotes and tips
@@ -268,8 +261,8 @@ body
 										p Evercontact’s become my ‘set it + forget it’ tool for getting organized.
 										br
 										p <strong>Sarah Perez, TechCrunch</strong>
-						td.section
-							table.bg-primary-color
+						td.section.bg-gradient
+							table
 								tr
 									td.padding.extra
 										p.white-color <em><strong>Pro-Tip:</strong> Boost your sales conversions with these three key steps</em>
