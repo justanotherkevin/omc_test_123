@@ -12,9 +12,10 @@ $border-color: #c1c1c1;
 body {
   background-color: #fff;
   table-layout: fixed;
-  // width: 100%;
   width: 600px;
+  // max-width: 600px;
   margin: 0 auto;
+  position: relative;
 }
 table {
   border-spacing: 0px 0px;
@@ -22,6 +23,7 @@ table {
   font-size: 0;
   line-height: 0;
   width: 100%;
+  // max-width: 600px;
 }
 table,
 td {
@@ -74,7 +76,7 @@ img {
   color: #fff;
 }
 .bg-gradient {
-  background-image: url('./imgs/Rectangle-bg.png');
+  background-image: url('https://res.cloudinary.com/dv4rpaias/image/upload/v1537888915/Rectangle-bg.png');
   background-position: center;
   background-size: cover;
 }
@@ -133,8 +135,9 @@ img {
       display: table-cell;
     }
   }
-  .header-logo-td img {
+  .logo-img img {
     width: 100%;
+    max-width: 200px;
   }
   .social-list {
     padding-left: 15px;
@@ -168,6 +171,9 @@ img {
       &.math-symbol {
         width: 5%;
         padding: 0 5px;
+        img {
+          max-width: 20px;
+        }
       }
     }
   }

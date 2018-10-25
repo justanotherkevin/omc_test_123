@@ -6,7 +6,8 @@ body {
   background-color: #fff;
   table-layout: fixed;
   width: 600px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  position: relative; }
 
 table {
   border-spacing: 0px 0px;
@@ -66,7 +67,7 @@ img {
   color: #fff; }
 
 .bg-gradient {
-  background-image: url("./imgs/Rectangle-bg.png");
+  background-image: url("https://res.cloudinary.com/dv4rpaias/image/upload/v1537888915/Rectangle-bg.png");
   background-position: center;
   background-size: cover; }
 
@@ -112,8 +113,9 @@ img {
 .header-table .three-column .section {
   display: table-cell; }
 
-.header-table .header-logo-td img {
-  width: 100%; }
+.header-table .logo-img img {
+  width: 100%;
+  max-width: 200px; }
 
 .header-table .social-list {
   padding-left: 15px; }
@@ -139,6 +141,8 @@ img {
   .math-table .three-column .section.math-symbol {
     width: 5%;
     padding: 0 5px; }
+    .math-table .three-column .section.math-symbol img {
+      max-width: 20px; }
 
 .monthly-table .two-column .section {
   width: 50%;

@@ -7,19 +7,20 @@ head
 	//- these file names will be replace by gulp with proper css file paths
 
 	link(rel="stylesheet", href="../sass/styles.scss")
-	//- - var data = { userStartDate: '{{user_start_date}}', currentMonth: '{{current_month}}', newContact: '{{new_contact}}', updatedContact: '{{updated_contact}}',totalContact: '{{total_contact}}', hourSaved:'{{hours_saved}}', monthlyIncrease: '{{monthly_email_increase}}', monthlyReceived:'{{monthly_email_received}}', monthlyPopular:'{{monthly_most_popular_person}}', monthlyNewPhoneNumber:'{{monthly_new_phone_person}}', monthlyNewEmail:'{{monthly_new_email_person}}', lifeTimeContactsAdded:'{{lifetime_contacts_added}}', lifeTimeContactsUpdated:'{{lifetime_contacts_updated}}',lifeTimeContactsTotal:'{{lifetime_contacts_total}}' }
-	- var data = { userStartDate: 99, currentMonth: '01/01/18', newContact: 99, updatedContact: 99,totalContact: 99, hourSaved:99, monthlyIncrease: 99, monthlyReceived:99, monthlyPopular:'joan veryveryverylongname', monthlyNewPhoneNumber:'joan veryveryverylongname', monthlyNewEmail:'joan veryveryverylongname', lifeTimeContactsAdded:99, lifeTimeContactsUpdated:99,lifeTimeContactsTotal:99 }
+	- var data = { userEmail: '{{user_email}}', userStartDate: '{{user_start_date}}', currentMonth: '{{current_month}}', newContact: '{{new_contact}}', updatedContact: '{{updated_contact}}',totalContact: '{{total_contact}}', hourSaved:'{{hours_saved}}', monthlyIncrease: '{{monthly_email_increase}}', monthlyReceived:'{{monthly_email_received}}', monthlyPopular:'{{monthly_most_popular_person}}', monthlyNewPhoneNumber:'{{monthly_new_phone_person}}', monthlyNewEmail:'{{monthly_new_email_person}}', lifeTimeContactsAdded:'{{lifetime_contacts_added}}', lifeTimeContactsUpdated:'{{lifetime_contacts_updated}}',lifeTimeContactsTotal:'{{lifetime_contacts_total}}' }
+	//- - var data = { userStartDate: 99, currentMonth: '01/01/18', newContact: 99, updatedContact: 99,totalContact: 99, hourSaved:99, monthlyIncrease: 99, monthlyReceived:99, monthlyPopular:'joan veryveryverylongname', monthlyNewPhoneNumber:'joan veryveryverylongname', monthlyNewEmail:'joan veryveryverylongname', lifeTimeContactsAdded:99, lifeTimeContactsUpdated:99,lifeTimeContactsTotal:99 }
 
 body
-	table(class='outer-table header-table', cellpadding="0", border="0", cellspacing="0")
+	//- HEADER 
+	table.header-table
 		tr
 			td.content.main-table.bg-gradient
 				table.three-column
 					tr
 						td.content.section
 							p.white-color <strong>#{data.currentMonth}</strong>
-						td.section
-							img(src='./imgs/company-logo.png')
+						td.section.logo-img
+							img(src='https://s3.amazonaws.com/ec-digest-email-creatives/company-logo.png')
 						td.section.last.social-list
 							table
 								tr 
@@ -27,21 +28,21 @@ body
 										a(href='https://www.facebook.com/Evercontact1')
 											img(
 												class='social-fb-icon' 
-												src='./imgs/social-fb.png'
+												src='https://s3.amazonaws.com/ec-digest-email-creatives/social-fb.png'
 												alt='facebook-link'
 												)
 									td
 										a(href='https://twitter.com/evercontact')
 											img(
 												class='social-twi-icon'
-												src='./imgs/social-twi.png'
+												src='https://s3.amazonaws.com/ec-digest-email-creatives/social-twi.png'
 												alt='twitter-link'
 												)
 									td 
 										a(href='http://blog.evercontact.com/feed/')
 											img(
 												class='social-blog-icon'
-												src='./imgs/social-blog.png'
+												src='https://s3.amazonaws.com/ec-digest-email-creatives/social-blog.png'
 												alt='blog-link'
 												)
 	//- END header table
@@ -52,7 +53,7 @@ body
 				table.one-column
 					tr 
 						td.content 
-							p You’re the best. Thanks for continuing to rely on Evercontact to keep that address book of yours up-to-date. 
+							p #{data.userEmail} you’re the best. Thanks for continuing to rely on Evercontact to keep that address book of yours up-to-date. 
 							br
 							p Let’s take a look at your monthly stats!
 	//- END section post header text 
@@ -69,31 +70,31 @@ body
 										table
 											tr
 												td.td-padding
-													img(class="icon" src='./imgs/Group-1-reload.png')
+													img(class="icon" src='https://s3.amazonaws.com/ec-digest-email-creatives/Group-1-reload.png')
 													h3.primary-color #{data.totalContact}
 													p Total Contacts
 									td.section.math-symbol.section
 										table
 											tr
 												td
-													img( src='./imgs/math_equal.png')
+													img( src='https://s3.amazonaws.com/ec-digest-email-creatives/math_equal.png')
 									td.section
 										table
 											tr
 												td.td-padding
-													img(class="icon" src='./imgs/Group-1-folder.png')
+													img(class="icon" src='https://s3.amazonaws.com/ec-digest-email-creatives/Group-1-folder.png')
 													h3.primary-color #{data.newContact}
 													p Newly Added
 									td.section.math-symbol.section
 										table
 											tr
 												td
-													img( src='./imgs/math_plus.png')
+													img( src='https://s3.amazonaws.com/ec-digest-email-creatives/math_plus.png')
 									td.section
 										table
 											tr
 												td.td-padding
-													img(class="icon" src='./imgs/Group-1-contact.png')
+													img(class="icon" src='https://s3.amazonaws.com/ec-digest-email-creatives/Group-1-contact.png')
 													h3.primary-color #{data.updatedContact}
 													p Updated Existing
 					tr
@@ -104,31 +105,31 @@ body
 										table
 											tr
 												td.td-padding
-													img(class="icon" src='./imgs/Group-1-time.png')
+													img(class="icon" src='https://s3.amazonaws.com/ec-digest-email-creatives/Group-1-time.png')
 													h3.primary-color #{data.hourSaved}
 													p Hours Saved
 									td.section.math-symbol
 										table
 											tr
 												td
-													img( src='./imgs/math_equal.png')
+													img( src='https://s3.amazonaws.com/ec-digest-email-creatives/math_equal.png')
 									td.section
 										table
 											tr
 												td.td-padding
-													img(class="icon" src='./imgs/Group-1-people.png')
+													img(class="icon" src='https://s3.amazonaws.com/ec-digest-email-creatives/Group-1-people.png')
 													h3.primary-color #{data.newContact}
 													p Total Contacts 
 									td.section.math-symbol
 										table
 											tr
 												td
-													img( src='./imgs/math_multi.png')
+													img( src='https://s3.amazonaws.com/ec-digest-email-creatives/math_multi.png')
 									td.section
 										table
 											tr
 												td.td-padding
-													img(class="icon" src='./imgs/Group-1-clock.png')
+													img(class="icon" src='https://s3.amazonaws.com/ec-digest-email-creatives/Group-1-clock.png')
 													h3.primary-color 5
 													p Min. Per
 	//- END section for all the maths
@@ -142,7 +143,7 @@ body
 							table
 								tr.content
 									td.td-padding
-										img(class='icon' src='./imgs/Group-2-inmail.png')
+										img(class='icon' src='https://s3.amazonaws.com/ec-digest-email-creatives/Group-2-inmail.png')
 									td
 										h3.primary-color #{data.monthlyReceived} emails
 										p Total emails received
@@ -150,7 +151,7 @@ body
 							table.last
 								tr.content
 									td.td-padding
-										img(class='icon' src='./imgs/Group-2-mailbox.png')
+										img(class='icon' src='https://s3.amazonaws.com/ec-digest-email-creatives/Group-2-mailbox.png')
 									td
 										h3.primary-color #{data.monthlyIncrease}% increase
 										p Up X% over last month
@@ -165,21 +166,21 @@ body
 							table
 								tr
 									td.td-padding.content
-										img(class='icon' src='./imgs/Group-3-star.png')
+										img(class='icon' src='https://s3.amazonaws.com/ec-digest-email-creatives/Group-3-star.png')
 										p.primary-color.name #{data.monthlyPopular}
 										p is your most popular contact
 						td.section
 							table
 								tr
 									td.td-padding.content
-										img(class='icon' src='./imgs/Group-3-phone.png')
+										img(class='icon' src='https://s3.amazonaws.com/ec-digest-email-creatives/Group-3-phone.png')
 										p.primary-color.name #{data.monthlyNewPhoneNumber}
 										p has a new phone number
 						td.section
 							table
 								tr
 									td.td-padding.content
-										img(class='icon' src='./imgs/Group-3-mail.png')
+										img(class='icon' src='https://s3.amazonaws.com/ec-digest-email-creatives/Group-3-mail.png')
 										p.primary-color.name #{data.monthlyNewEmail}
 										p has a new email address
 	//- 🤟 END section for special people
@@ -256,7 +257,7 @@ body
 							table 
 								tr
 									td.quotes-icon-padding
-										img(class="icon-quotes" src='./imgs/Group-4-quotes.png')
+										img(class="icon-quotes" src='https://s3.amazonaws.com/ec-digest-email-creatives/Group-4-quotes.png')
 									td.padding
 										p Evercontact’s become my ‘set it + forget it’ tool for getting organized.
 										br
@@ -277,7 +278,7 @@ body
 							table
 								tr
 									td 
-										img(class="icon-made-in-ny" src='./imgs/made-in-ny.png')
+										img(class="icon-made-in-ny" src='https://s3.amazonaws.com/ec-digest-email-creatives/made-in-ny.png')
 									td 
 										p © 2018 One More Company, Inc.
 						td.section.second
